@@ -5,7 +5,7 @@
  <desc>Created with Sketch.</desc>
  <g>
   <title>background</title>
-  <rect x="-1" y="-1" width="109" height="35" id="canvas_background" fill="none"/>
+  <rect x="-1" y="-1" width="auto" height="35" id="canvas_background" fill="none"/>
  </g>
  <g>
   <title>Layer 1</title>

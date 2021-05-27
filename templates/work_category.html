@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Nasim - Portfolio/CV/Resume</title>
+	<title>Tusar - Portfolio/CV/Resume</title>
 	<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -103,10 +103,8 @@
             <a class="navbar-brand" href="/works"><img src="/static/images/logo-nasim.svg" alt="Nasim" /></a> <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto scrollspy">
-                    <li class="nav-item"><a class="nav-link" href="/works/ডাইনামিক-অ্যাপ্লিকেশন">ডাইনামিক অ্যাপ্লিকেশন</a></li>
-                    <li class="nav-item"><a href="/works/স্ট্যাটিক-অ্যাপ্লিকেশন" class="nav-link">স্ট্যাটিক অ্যাপ্লিকেশন</a></li>
-                    <li class="nav-item"><a href="/works/ওয়েব-ডিজাইন" class="nav-link">ওয়েব ডিজাইন</a></li>
-                    <li class="nav-item"><a href="/works/জেঙ্গু-স্পেশাল" class="nav-link">জেঙ্গু স্পেশাল</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/works/android">Android</a></li>
+                    <li class="nav-item"><a href="/works/others" class="nav-link">Others</a></li>
                     
                     
                     
@@ -173,16 +171,16 @@
                     <span class="step-links">
                        {% if page_obj.has_previous %}
                            <a href="?page=1">&laquo; প্রথম</a>
-                           <a href="?page={{ page_obj.previous_page_number }}">পূর্বে</a>
+                           <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
                        {% endif %}
 
                             <span class="current">
-                                   পাতা- {{ page_obj.number }}, {{ page_obj.paginator.num_pages }} -এর
+                                   Page no. {{ page_obj.number }}, out of {{ page_obj.paginator.num_pages }}
                             </span>
 
                         {% if page_obj.has_next %}
-                           <a href="?page={{ page_obj.next_page_number }}">পরবর্তি</a>
-                           <a href="?page={{ page_obj.paginator.num_pages }}">শেষ &raquo;</a>
+                           <a href="?page={{ page_obj.next_page_number }}">Previous</a>
+                           <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
                         {% endif %}
                     </span>
             </div>
@@ -195,7 +193,7 @@
     
     <footer class="footer light">
         <div class="container">
-            <span class="copyright">© 2020 <a href="https://web.facebook.com/nasimnimu007/">Nasim Mahmud</a>.</span>
+            <span class="copyright">© 2021 <a href="https://web.facebook.com/tousifurrahman.tusar/">Tousifur Rahman Tusar</a>.</span>
         </div>
     </footer>
 	

@@ -103,20 +103,17 @@
             <a class="navbar-brand" href="/"><img src="/static/images/logo-nasim.svg" alt="Nasim" /></a> <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto scrollspy">
-                    <li class="nav-item"><a class="nav-link" href="/blogs/ইথিক্যাল-হ্যাকিং">ইথিক্যাল হ্যাকিং</a></li>
-                    <li class="nav-item"><a href="/blogs/ওয়েব-ডেভেলপিং" class="nav-link">ওয়েব ডেভেলপিং</a></li>
-                    <li class="nav-item"><a href="/blogs/প্রোগ্রামিং" class="nav-link">প্রোগ্রামিং</a></li>
-                    <li class="nav-item"><a href="/blogs/জেঙ্গু" class="nav-link">জেঙ্গু</a></li>
-                    <li class="nav-item"><a href="/blogs/পাইথন" class="nav-link">পাইথন</a></li>
-                    <li class="nav-item"><a href="/blogs/পদার্থ" class="nav-link">পদার্থ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blogs/android">Android</a></li>
+                    <li class="nav-item"><a href="/blogs/technology" class="nav-link">Technology</a></li>
+                    <li class="nav-item"><a href="/blogs/programming" class="nav-link">Programming</a></li>
+                    <li class="nav-item"><a href="/blogs/story" class="nav-link">Story</a></li>
                     
                     <div class="dropdown">
-                       <li class="nav-item"><a href="#blog" class="nav-link">আরোও</a></li>
+                       <li class="nav-item"><a href="#blog" class="nav-link">More...</a></li>
                            <div class="dropdown-content">
-                                  <li class="nav-item"><a href="/blogs/উচ্চতর-গণিত" class="nav-link">উচ্চতর গণিত</a></li>
-                                  <li class="nav-item"><a href="/blogs/বাংলাদেশ" class="nav-link">বাংলাদেশ</a></li>
-                                  <li class="nav-item"><a href="/blogs/সাহিত্য" class="nav-link">সাহিত্য</a></li>
-                                  <li class="nav-item"><a href="/blogs/বিজ্ঞান" class="nav-link">বিজ্ঞান</a></li>
+                                  <li class="nav-item"><a href="/blogs/motivation" class="nav-link">Motivation</a></li>
+                                  <li class="nav-item"><a href="/blogs/quotes" class="nav-link">Quotes</a></li>
+                                  
                            </div>
                     </div>
                     
@@ -187,12 +184,12 @@
                        {% endif %}
 
                             <span class="current">
-                                   পাতা {{ page_obj.number }}, {{ page_obj.paginator.num_pages }} এর
+                                   Page No. {{ page_obj.number }}, out of {{ page_obj.paginator.num_pages }} 
                             </span>
 
                         {% if page_obj.has_next %}
-                           <a href="?page={{ page_obj.next_page_number }}">পরবর্তি</a>
-                           <a href="?page={{ page_obj.paginator.num_pages }}">শেষ &raquo;</a>
+                           <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                           <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
                         {% endif %}
                     </span>
             </div>
@@ -205,7 +202,7 @@
     
     <footer class="footer light">
         <div class="container">
-            <span class="copyright">© 2020 <a href="https://web.facebook.com/nasimnimu007/">Nasim Mahmud</a>.</span>
+            <span class="copyright">© 2021 <a href="https://web.facebook.com/tousifurrahman.tusar/">Tousifur Rahman Tusar</a>.</span>
         </div>
     </footer>
 	

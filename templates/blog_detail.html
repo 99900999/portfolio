@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Nasim - Portfolio/CV/Resume</title>
+	<title>Tusar - Portfolio/CV/Resume</title>
 	<meta name="description" content="Bolby - Portfolio/CV/Resume HTML Template">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -123,20 +123,18 @@
             <a class="navbar-brand" href="/"><img src="/static/images/logo-nasim.svg" alt="Nasim" /></a> <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto scrollspy">
-                    <li class="nav-item"><a class="nav-link" href="/blogs/ইথিক্যাল-হ্যাকিং">ইথিক্যাল হ্যাকিং</a></li>
-                    <li class="nav-item"><a href="/blogs/ওয়েব-ডেভেলপিং" class="nav-link">ওয়েব ডেভেলপিং</a></li>
-                    <li class="nav-item"><a href="/blogs/প্রোগ্রামিং" class="nav-link">প্রোগ্রামিং</a></li>
-                    <li class="nav-item"><a href="/blogs/জেঙ্গু" class="nav-link">জেঙ্গু</a></li>
-                    <li class="nav-item"><a href="/blogs/পাইথন" class="nav-link">পাইথন</a></li>
-                    <li class="nav-item"><a href="/blogs/পদার্থ" class="nav-link">পদার্থ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blogs/android">Android</a></li>
+                    <li class="nav-item"><a href="/blogs/technology" class="nav-link">Technology</a></li>
+                    <li class="nav-item"><a href="/blogs/programming" class="nav-link">Programming</a></li>
+                    <li class="nav-item"><a href="/blogs/development" class="nav-link">Android Development</a></li>
                     
                     <div class="dropdown">
-                       <li class="nav-item"><a href="#blog" class="nav-link">আরোও</a></li>
+                       <li class="nav-item"><a href="#blog" class="nav-link">More...</a></li>
                            <div class="dropdown-content">
-                                  <li class="nav-item"><a href="/blogs/উচ্চতর-গণিত" class="nav-link">উচ্চতর গণিত</a></li>
-                                  <li class="nav-item"><a href="/blogs/বাংলাদেশ" class="nav-link">বাংলাদেশ</a></li>
-                                  <li class="nav-item"><a href="/blogs/সাহিত্য" class="nav-link">সাহিত্য</a></li>
-                                  <li class="nav-item"><a href="/blogs/বিজ্ঞান" class="nav-link">বিজ্ঞান</a></li>
+                                  <li class="nav-item"><a href="/blogs/story" class="nav-link">Story</a></li>
+                                  <li class="nav-item"><a href="/blogs/quotes" class="nav-link">Quotes</a></li>
+                                  <li class="nav-item"><a href="/blogs/motivation" class="nav-link">Motivation</a></li>
+                                  
                            </div>
                     </div>
                     
@@ -163,20 +161,20 @@
 
         <!-- Author -->
         <p class="lead">
-          পোস্টটি লিখেছেনঃ 
+          Author: 
           <a href="#">{{ post.author.last_name }}</a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>পোস্ট করা হয়েছে {{ post.created_on }} সময়ে এবং পড়া হয়েছে {{ post.visit_num }} বার।</p>
+        <p>Posted on {{ post.created_on }} and Read {{ post.visit_num }} times.</p>
 
         <hr>
 
         <!-- Preview Image -->
         <div class="card-body">
-        <img class="img-fluid rounded" src="/static/default.png" alt="">
+        <img class="img-fluid rounded" src="/static/default.png" alt="Tusar">
          </div>
         <hr>
         
@@ -200,12 +198,12 @@
         <!-- Dynamic Comments-->
         <!-- Comments Form --> 
           
-                  <h5>আপনার মন্তব্য লিখুন</h5>
+                  <h5>Share your views: </h5>
                   
                      <form action="." method="post" style="margin-top: 1.3em">
                            {{ comment_form | crispy }}
                            {% csrf_token %}
-                         <button type="submit" class="btn btn-default">সাবমিট</button>
+                         <button type="submit" class="btn btn-default">Submit</button>
                          
                       </form>
                    
@@ -213,12 +211,12 @@
         
         <div class="card-body"
         <!-- Comment with nested comments -->
-        <h2>{{ comments.count }} টি মন্তব্য করা হয়েছে।</h2>
+        <h2>Already {{ comments.count }} has been added!</h2>
         
         {% for comment in comments %}
         
         <div class="media mb-4" style="margin-top:40px">
-          <img class="d-flex mr-3 rounded-circle" src="/static/images/avatar-2.svg" width="70px" height="70px" alt="">
+          <img class="d-flex mr-3 rounded-circle" src="/static/images/avatar-2.svg" width="70px" height="70px" alt="Tusar">
           <div class="media-body">
             
             <h5 class="mt-0">{{ comment.name }}</h5>
@@ -231,7 +229,7 @@
        
        {% if empty %}
          <div class="card-body">
-         <h3>এখনো কোনো মন্তব্য করা হয়নি &#128512;</h3>
+         <h3>No comments yet &#128512;</h3>
          </div>
       {% endif %}
         
@@ -251,53 +249,40 @@
 
         <!-- Categories Widget -->
         <div class="card-body">
-          <h5 class="card-header">ক্যাটাগরি</h5>
+          <h5 class="card-header">Category</h5>
           <div class="card-body">
             <div class="row">
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="/ইথিক্যাল-হ্যাকিং">ইথিক্যাল হ্যাকিং</a>
+                    <a href="/android">Android</a>
                   </li>
                   <li>
-                    <a href="/ওয়েব-ডেভেলপিং">ওয়েব ডেভেলপিং </a>
+                    <a href="/technology">Technology</a>
                   </li>
                   <li>
-                    <a href="/প্রোগ্রামিং">প্রোগ্রামিং</a>
+                    <a href="/programming">Programming</a>
                   </li>
 
                   <li>
-                    <a href="/জেঙ্গু">জেঙ্গু</a>
+                    <a href="/development">Android Development</a>
                   </li>
-                  
-                  <li>
-                    <a href="/পাইথন">পাইথন</a>
-                  </li>
+                                
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="/পদার্থ">পদার্থ</a>
+                    <a href="/story">Story</a>
                   </li>
                   <li>
-                    <a href="/রসায়ন">রসায়ন</a>
+                    <a href="/motivation">Motivation</a>
                   </li>
                   <li>
-                    <a href="/উচ্চতর গণিত">উচ্চতর গণিত</a>
+                    <a href="/quote">Quotes</a>
                   </li>
 
-                  <li>
-                    <a href="/বাংলাদেশ">বাংলাদেশ</a>
-                  </li>
                   
-                  <li>
-                    <a href="/সাহিত্য">সাহিত্য</a>
-                  </li>
-                  
-                  <li>
-                    <a href="/বিজ্ঞান">বিজ্ঞান</a>
-                  </li>
                 
                 </ul>
               </div>
@@ -307,9 +292,9 @@
 
         <!-- Side Widget -->
           <div class="card-body">
-          <h5 class="card-header">পার্শ্ব কন্টেন্ট</h5>
+          <h5 class="card-header">Related Contents</h5>
           <div class="card-body">
-          সিমিলার ব্লগ পোস্ট গুলো এখানে দেখানে হবে।
+          Post that matches your interest...
           </div>
          </div>
 
@@ -325,7 +310,7 @@
     
     <footer class="footer light">
         <div class="container">
-            <span class="copyright">© 2020 <a href="https://web.facebook.com/nasimnimu007/">Nasim Mahmud</a>.</span>
+            <span class="copyright">© 2021 <a href="https://web.facebook.com/tousifurrahman.tusar/">Tousifur Rahman Tusar</a>.</span>
         </div>
     </footer>
 	
